@@ -1,6 +1,10 @@
 from time import time
 from mcp.server.fastmcp import FastMCP
 
+""" This MCP server simulates worker laptops with fake data for testing purposes.
+    It includes tools to fetch battery status, RAM usage, CPU usage, and disk status for each worker.
+    This server does not connect to real machines but provides a structure for how to implement such connections.
+"""
 # ------------------------------------
 # Create MCP Server
 # ------------------------------------

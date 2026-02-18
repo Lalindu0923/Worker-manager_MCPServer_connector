@@ -2,16 +2,28 @@ from mcp.server.fastmcp import FastMCP
 import httpx
 import json
 
+
+""" This MCP server connects to real worker machines on the network to fetch live system metrics.
+    It also includes demo worker data for testing and comparison.
+    this include real workers.
+"""
 # ------------------------------------
 # Configuration - ADD YOUR REAL WORKERS HERE!
 # ------------------------------------
 # To add more workers: Just add another dictionary to the list below
 REAL_WORKERS = [
     {
-        "name": "Friend's Laptop",
-        "ip": "10.90.196.61",
+        "name": "bumal's Laptop",
+        "ip": "10.189.47.62",
+        "port": 8000
+    },
+    
+    {
+        "name": "buddhini's Laptop",
+        "ip": "10.189.47.74",
         "port": 8000
     }
+    
 ]
 
 FAKE_WORKERS = [
@@ -79,7 +91,7 @@ FAKE_WORKERS = [
         "system_uptime_seconds": 86400
     }
 ]
-# ========== END FAKE DEMO WORKERS - DELETE UP TO HERE ==========
+# ========== END FAKE DEMO WORKERS ==========
 
 # ------------------------------------
 # Create MCP Server
@@ -216,7 +228,7 @@ def test_worker_connection():
     }
 
 
-# ========== FAKE WORKERS TOOL - DELETE THIS FUNCTION TO REMOVE ==========
+# ========== FAKE WORKERS TOOL ==========
 @mcp.tool(
     description=(
         "Get status of ALL workers (both real and demo). Returns a combined list "
