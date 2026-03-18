@@ -1,0 +1,10 @@
+    "test-worker": {
+      "command": "C:\\Users\\username\\.local\\bin\\uv.exe",
+      "args": [
+        "--directory",
+        "local\\folder\\path\\testadmin",
+        "run",
+        "manager.py"
+      ]
+    }
+  },
